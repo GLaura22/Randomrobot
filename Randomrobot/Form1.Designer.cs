@@ -1,6 +1,6 @@
 ﻿namespace Randomrobot
 {
-    partial class Form1 //partal = ez az osztaly tobb fajlban is megtalalhato
+    partial class Form1 ///partal = ez az osztaly tobb fajlban is megtalalhato
     {
         /// <summary>
         ///  Required designer variable.
@@ -33,7 +33,7 @@
             this.cimke2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.robotPicBox = new System.Windows.Forms.PictureBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.genderCimke = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.robotPicBox)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +44,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 34);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -53,18 +53,18 @@
             this.cimke1.AutoSize = true;
             this.cimke1.Location = new System.Drawing.Point(40, 92);
             this.cimke1.Name = "cimke1";
-            this.cimke1.Size = new System.Drawing.Size(59, 25);
+            this.cimke1.Size = new System.Drawing.Size(100, 25);
             this.cimke1.TabIndex = 1;
-            this.cimke1.Text = "label1";
+            this.cimke1.Text = "NameLabel";
             // 
             // cimke2
             // 
             this.cimke2.AutoSize = true;
             this.cimke2.Location = new System.Drawing.Point(40, 142);
             this.cimke2.Name = "cimke2";
-            this.cimke2.Size = new System.Drawing.Size(59, 25);
+            this.cimke2.Size = new System.Drawing.Size(95, 25);
             this.cimke2.TabIndex = 2;
-            this.cimke2.Text = "label1";
+            this.cimke2.Text = "EmailLabel";
             // 
             // pictureBox1
             // 
@@ -85,19 +85,21 @@
             this.robotPicBox.TabIndex = 4;
             this.robotPicBox.TabStop = false;
             // 
-            // progressBar1
+            // genderCimke
             // 
-            this.progressBar1.Location = new System.Drawing.Point(413, 31);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(150, 34);
-            this.progressBar1.TabIndex = 5;
+            this.genderCimke.AutoSize = true;
+            this.genderCimke.Location = new System.Drawing.Point(350, 123);
+            this.genderCimke.Name = "genderCimke";
+            this.genderCimke.Size = new System.Drawing.Size(110, 25);
+            this.genderCimke.TabIndex = 5;
+            this.genderCimke.Text = "GenderLabel";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 450);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.genderCimke);
             this.Controls.Add(this.robotPicBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cimke2);
@@ -120,6 +122,6 @@
         private Label cimke2;
         private PictureBox pictureBox1;
         private PictureBox robotPicBox;
-        private ProgressBar progressBar1;
+        private Label genderCimke;
     }
 }
