@@ -53,7 +53,14 @@ namespace Randomrobot
                         cmd.Parameters.AddWithValue("@email", email); 
                         cmd.Prepare();
                         cmd.ExecuteNonQuery();
+
+                        if (rawdata.results[0].gender == "female")
+                        {
+                            progressBar1.PerformStep();
+                        }
                     }
+
+                    
 
                     catch (Exception ex)
                     {
@@ -61,7 +68,7 @@ namespace Randomrobot
                         cimke2.Text = "*****";
                         genderCimke.Text = "*****";
                     }
-                    con.Close();
+                   
                 }
             }
         }
@@ -70,5 +77,22 @@ namespace Randomrobot
         {
             MessageBox.Show("Nice");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (con = new SQLiteConnection("Data Source = Robot.db"))
+            {
+                cmd.CommandText = "SELECT COUNT(*) AS 'count' FROM veletlenfelh WHERE nev LIKE 'L%'";
+                //cmd.Prepare();
+                var r = cmd.ExecuteReader();
+                r.Read();
+                var count = (long)r["count"];
+               
+
+                MessageBox.Show(String.Format("The number of people, who's name starts with L: {0}", count));
+
+            }
+        }
     }
+    
 }
